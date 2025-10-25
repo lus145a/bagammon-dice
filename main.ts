@@ -1,7 +1,13 @@
 input.onButtonPressed(Button.A, function () {
+    OLED.clear()
     nummer1 = randint(1, 6)
     nummer2 = randint(1, 6)
     OLED.writeStringNewLine("" + nummer1 + " + " + nummer2 + " = " + (nummer1 + nummer2))
+    if (nummer1 == nummer2) {
+        OLED.newLine()
+        OLED.writeStringNewLine("Du slog dobbelt!")
+        nummer1 += 1
+    }
 })
 input.onButtonPressed(Button.B, function () {
     OLED.clear()
@@ -12,10 +18,3 @@ nummer1 = 1
 nummer2 = 0
 OLED.init(128, 64)
 OLED.clear()
-basic.forever(function () {
-    if (nummer1 == nummer2) {
-        OLED.newLine()
-        OLED.writeStringNewLine("Du slog dobbelt!")
-        nummer1 += 1
-    }
-})
