@@ -1,7 +1,7 @@
 input.onButtonPressed(Button.A, function () {
     nummer1 = randint(1, 6)
     nummer2 = randint(1, 6)
-    OLED.writeStringNewLine("" + nummer1 + " +/og " + nummer2 + "=" + (nummer1 + nummer2))
+    OLED.writeStringNewLine("" + nummer1 + " + " + nummer2 + " = " + (nummer1 + nummer2))
 })
 input.onButtonPressed(Button.B, function () {
     OLED.clear()
