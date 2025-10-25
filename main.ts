@@ -17,9 +17,5 @@ basic.forever(function () {
         OLED.newLine()
         OLED.writeStringNewLine("Du slog dobbelt!")
         nummer1 += 1
-    } else if (nummer2 == nummer1) {
-        OLED.newLine()
-        OLED.writeStringNewLine("Du slog dobbelt!")
-        nummer1 += 1
     }
 })
